@@ -1,0 +1,265 @@
+
+<h2 class="sr-only">ZERO Markets Instagram Boost 深度复盘报告 0427–0505，含KPI概览、漏斗分析、素材效能矩阵及优化建议</h2>
+
+<style>
+.rpt-outer { max-width: 1024px; margin: 0 auto; padding: 1.5rem 2rem; box-sizing: border-box; }
+.rpt-header { border-bottom: 0.5px solid var(--color-border-tertiary); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+.rpt-header h1 { font-size: 18px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+.rpt-header p { font-size: 12px; color: var(--color-text-secondary); margin: 0; }
+.section-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: .06em; text-transform: uppercase; margin: 2rem 0 .75rem; padding-bottom: 4px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 1.5rem; }
+.kpi-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: .85rem 1rem; }
+.kpi-label { font-size: 11px; color: var(--color-text-secondary); margin: 0 0 4px; }
+.kpi-value { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 0; line-height: 1.1; }
+.kpi-sub { font-size: 11px; color: var(--color-text-secondary); margin: 2px 0 0; }
+.chart-wrap { position: relative; width: 100%; }
+.insight-box { background: var(--color-background-secondary); border-left: 3px solid #378ADD; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: .75rem 1rem; margin: .75rem 0 1.25rem; font-size: 13px; color: var(--color-text-primary); line-height: 1.65; }
+.insight-box strong { font-weight: 500; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.action-item { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: .85rem 1rem; border-left: 3px solid; margin-bottom: 8px; font-size: 13px; line-height: 1.6; }
+.action-item .tag { font-size: 11px; font-weight: 500; letter-spacing:.04em; margin-bottom: 4px; }
+.act-green { border-color: #639922; }
+.act-green .tag { color: #3B6D11; }
+.act-red { border-color: #E24B4A; }
+.act-red .tag { color: #A32D2D; }
+.act-blue { border-color: #378ADD; }
+.act-blue .tag { color: #185FA5; }
+</style>
+
+<div class="rpt-outer">
+  <div class="rpt-header">
+    <h1>ZERO Markets — IG Boost 深度复盘报告</h1>
+    <p>投放周期：2026-04-27 → 2026-05-05 &nbsp;·&nbsp; 素材：5条 &nbsp;·&nbsp; 数据截至最终结算</p>
+  </div>
+
+  <div class="section-title">第一部分 · 全盘概览</div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card"><p class="kpi-label">总预算</p><p class="kpi-value">$226.56</p><p class="kpi-sub">5条素材合计</p></div>
+    <div class="kpi-card"><p class="kpi-label">总涨粉</p><p class="kpi-value">1,248</p><p class="kpi-sub">新增关注者</p></div>
+    <div class="kpi-card"><p class="kpi-label">总访问量 (Impressions)</p><p class="kpi-value">1,382,947</p><p class="kpi-sub">含全部素材</p></div>
+    <div class="kpi-card"><p class="kpi-label">平均获粉成本</p><p class="kpi-value">$0.181</p><p class="kpi-sub">Cost per Follower</p></div>
+  </div>
+
+  <div class="chart-wrap" style="height:240px">
+    <canvas id="funnelChart" role="img" aria-label="转化漏斗：Impressions 1382947 → Profile Visits 12275 → Follows 1248">转化漏斗数据</canvas>
+  </div>
+
+  <div class="insight-box">
+    <strong>漏斗洞察：</strong>从 <strong>1,382,947</strong> 次曝光到 <strong>12,275</strong> 次主页访问，流失率 <strong>99.1%</strong>；从主页访问到 <strong>1,248</strong> 次关注，转化率仅 <strong>10.2%</strong>。大量流量在"看到 → 点击"环节流失，意味着封面吸引力是最大瓶颈——内容能否"在 3 秒内制造点击冲动"直接决定涨粉规模。
+  </div>
+
+  <div class="section-title">第二部分 · 素材效能矩阵</div>
+
+  <div class="two-col">
+    <div>
+      <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 6px">象限图 — Impressions vs Profile Visits</p>
+      <div class="chart-wrap" style="height:280px"><canvas id="quadChart" role="img" aria-label="象限分析：5条素材按曝光量和主页访问量分布">象限数据</canvas></div>
+    </div>
+    <div>
+      <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 6px">各素材获粉绝对值 vs 获粉成本</p>
+      <div class="chart-wrap" style="height:280px"><canvas id="followChart" role="img" aria-label="各素材涨粉对比：Reel2最多868粉">涨粉数据</canvas></div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <strong>效能结论：</strong>Reel 2 以 <strong>$59.68</strong> 预算获取 <strong>868</strong> 粉，单粉成本 <strong>$0.069</strong>，是全场最优；Post 3 以 <strong>$60.01</strong> 获取 337 粉，成本 <strong>$0.178</strong>，品牌曝光价值显著。Reel 1 单粉成本高达 <strong>$0.313</strong>，ROI 最差。Post 1/2 合计仅贡献 28 粉，属于资源黑洞。
+  </div>
+
+  <p style="font-size:12px;color:var(--color-text-secondary);margin:1rem 0 6px">互动率对比 — (Likes+Comments+Shares) / Impressions × 100</p>
+  <div class="chart-wrap" style="height:200px">
+    <canvas id="engChart" role="img" aria-label="互动率：Reel1最高21.84%，Post3次之4.49%">互动率数据</canvas>
+  </div>
+
+  <div class="insight-box">
+    <strong>互动率洞察：</strong>Reel 1 互动率 <strong>21.84%</strong> 遥遥领先，印证宏观经济内容有"信息消费"价值，但用户止于消费、不愿关注；Post 3 互动率 <strong>4.49%</strong> 强劲，Reel 2 仅 <strong>0.11%</strong>——后者用户行为模式是"看完 → 直接关注"，跳过点赞环节，是最纯粹的涨粉驱动内容。
+  </div>
+
+  <div class="section-title">第三部分 · 核心现象洞察</div>
+
+  <div class="two-col">
+    <div>
+      <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 6px">Reel 1 vs Reel 2 — 视频播完率</p>
+      <div class="chart-wrap" style="height:200px"><canvas id="reelCompChart" role="img" aria-label="Reel1 vs Reel2 播放完成率对比">播完率数据</canvas></div>
+    </div>
+    <div>
+      <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 6px">Post 3 vs Reel 2 — 转化漏斗对比</p>
+      <div class="chart-wrap" style="height:200px"><canvas id="p3r2Chart" role="img" aria-label="Post3和Reel2的漏斗层级对比">漏斗对比</canvas></div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <strong>Reel 1 vs Reel 2 的本质差异：</strong>Reel 1（美联储/通胀）属于<strong>信息补给型内容</strong>——用户观看是为了"知道这件事"，目的达成即离开，没有"我需要持续关注这个账号"的驱动力。Reel 2（技术分析无效论）是<strong>认知颠覆型内容</strong>——疑问句封面引发焦虑，反直觉开头制造好奇，结尾升华至概率论框架，用户产生"这个账号能帮我避坑/提升认知"的关联，关注变成自然决策。
+  </div>
+
+  <div class="insight-box" style="border-color:#639922">
+    <strong>Post 3 vs Reel 2 — 营销漏斗分工：</strong>Post 3（品牌信任）：价值观锚定 + 清单式承诺 → 用户需要"多维度考核"，主页访问高（9,500次）但转化率相对低（3.5%）；它是决策前的<strong>品牌背书环节</strong>。Reel 2（专家认知）：痛点标题 + 价值输出 → 用户被内容本身吸引，关注是获取后续价值的行为，转化率（5.1%）更高；它是<strong>价值输出驱动的直接关注</strong>。两者形成完整闭环：Reel 2 流量引导 → 用户访问主页 → Post 3 品牌信任确认 → 最终关注。
+  </div>
+
+  <div class="section-title">第四部分 · 失败素材复盘</div>
+
+  <div class="two-col">
+    <div>
+      <div class="action-item act-red">
+        <div class="tag">⛔ POST 1 — 距离感诊断</div>
+        封面高端官方化设计，用户潜意识将其归类为<strong>广告</strong>，触发免疫机制。主标语更接近品牌口号而非痛点攻击，既无对话感，也无利益点。34,317 次曝光仅转化 398 次访问（1.16%），说明内容根本无法穿透"广告盲视"。<br><br>
+        <strong>根因：</strong>封面解决的是品牌展示，而非用户兴趣；缺乏"你为什么应该点击我"的直接信号。
+      </div>
+    </div>
+    <div>
+      <div class="action-item act-red">
+        <div class="tag">⛔ POST 2 — 认知负荷诊断</div>
+        教学类内容，属于<strong>查阅型</strong>而非社交型。保证金计算过程枯燥、用户体验差；用户不关心"计算如何完成"，他们关心"结论对我有什么用"。26,015 次曝光、306 次访问、13 个新关注，全场最低涨粉。<br><br>
+        <strong>根因：</strong>内容形式与社交算法错位——过程教学适合 YouTube/文章，不适合 IG Boost；缺乏对话感和情绪驱动。
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <strong>通用修复框架：</strong>封面解决<em>兴趣</em>（疑问/冲突/痛点），文案解决<em>深度</em>（价值/结论/指导），主页解决<em>信任</em>（品牌一致性）。三层缺一不可。Post 1/2 在封面层就已失守——后续投预算是无效的资源消耗。
+  </div>
+
+  <div class="section-title">第五部分 · 下阶段行动清单</div>
+
+  <div class="action-item act-green">
+    <div class="tag">✅ 加投 — 专家认知/避坑类 Reels</div>
+    复制 Reel 2 的内容结构模板：<strong>疑问句封面（戳痛点）→ 反直觉开头（制造好奇）→ 提出痛点 → 纠正误区 → 升华结论</strong>。题材优先"交易误区""避坑指南""被低估的XX"类型。目标：单粉成本保持在 $0.10 以内。
+  </div>
+  <div class="action-item act-green">
+    <div class="tag">✅ 持续投放 — Post 3 类品牌背书内容</div>
+    以"清单式价值陈述"为核心，强化品牌承诺。<strong>主页置顶</strong>此类帖子，作为 Reel 2 引流后的"品牌信任落地页"。用户路径：Reel（引流/认知）→ 点击主页 → 看到置顶 Post（信任确认）→ 关注。不需要持续加投，但需要作为主页的恒定锚点。
+  </div>
+  <div class="action-item act-red">
+    <div class="tag">⛔ 立即停投 — Post 1 & Post 2</div>
+    两条素材的问题不在于预算不足，而在于<strong>内容形式与涨粉目标根本不匹配</strong>。继续投放只会提高平均获粉成本。将释放的预算（合计约 $36）全部转移至 Reel 2 追加投放，或用于测试新的避坑类 Reel 素材。
+  </div>
+  <div class="action-item act-blue">
+    <div class="tag">💡 结构优化 — 主页置顶 × 投放联动</div>
+    建立"<strong>投放 Reel（引流）→ 主页置顶 Post（品牌确认）→ 关注</strong>"的固定漏斗模型。每次新投放前，确认主页前3条帖子中至少1条为品牌信任类内容（类似 Post 3）。Reel 2 类内容负责带流量进门，Post 3 类内容负责在门口完成转化。
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+const textColor = isDark ? '#c2c0b6' : '#3d3d3a';
+const gridColor = isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.07)';
+
+const baseOpts = {
+  responsive: true, maintainAspectRatio: false,
+  plugins: { legend: { display: false } },
+  scales: {
+    x: { ticks: { color: textColor, font: { size: 11 } }, grid: { color: gridColor } },
+    y: { ticks: { color: textColor, font: { size: 11 } }, grid: { color: gridColor } }
+  }
+};
+
+new Chart(document.getElementById('funnelChart'), {
+  type: 'bar',
+  data: {
+    labels: ['曝光量 Impressions', '主页访问 Profile Visits', '新增关注 Follows'],
+    datasets: [{ label: '数量', data: [1382947, 12275, 1248], backgroundColor: ['#378ADD88','#1D9E7588','#BA751788'], borderColor: ['#378ADD','#1D9E75','#BA7517'], borderWidth: 1, borderRadius: 4 }]
+  },
+  options: { ...baseOpts, indexAxis: 'y',
+    plugins: { legend:{display:false}, tooltip:{ callbacks:{ label: ctx => ' '+ctx.raw.toLocaleString() } } },
+    scales: {
+      x: { ticks:{ color:textColor, font:{size:11}, callback: v => v>=1000000?(v/1000000).toFixed(1)+'M':v>=1000?(v/1000).toFixed(0)+'K':v }, grid:{color:gridColor} },
+      y: { ticks:{ color:textColor, font:{size:11} }, grid:{color:gridColor} }
+    }
+  }
+});
+
+const quadData = [
+  { x:879570, y:1700, label:'Reel 2 ⭐', color:'#1D9E75' },
+  { x:425986, y:9500, label:'Post 3 ⭐', color:'#BA7517' },
+  { x:34317,  y:398,  label:'Post 1',    color:'#E24B4A' },
+  { x:26015,  y:306,  label:'Post 2',    color:'#E24B4A' },
+  { x:16315,  y:371,  label:'Reel 1',    color:'#888780' },
+];
+new Chart(document.getElementById('quadChart'), {
+  type: 'scatter',
+  data: { datasets: quadData.map(d => ({ label:d.label, data:[{x:d.x,y:d.y}], backgroundColor:d.color+'cc', borderColor:d.color, pointRadius:9, pointHoverRadius:12 })) },
+  options: {
+    responsive:true, maintainAspectRatio:false,
+    plugins: { legend:{ display:true, position:'bottom', labels:{ color:textColor, font:{size:10}, boxWidth:10, padding:8 } }, tooltip:{ callbacks:{ label: ctx => ctx.dataset.label+': Imp='+ctx.raw.x.toLocaleString()+' PV='+ctx.raw.y.toLocaleString() } } },
+    scales: {
+      x: { title:{display:true,text:'Impressions',color:textColor,font:{size:10}}, ticks:{color:textColor,font:{size:10},callback:v=>(v/1000).toFixed(0)+'K'}, grid:{color:gridColor} },
+      y: { title:{display:true,text:'Profile Visits',color:textColor,font:{size:10}}, ticks:{color:textColor,font:{size:10}}, grid:{color:gridColor} }
+    }
+  }
+});
+
+new Chart(document.getElementById('followChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Reel 2','Post 3','Reel 1','Post 1','Post 2'],
+    datasets: [
+      { label:'涨粉数', data:[868,337,223,15,13], backgroundColor:['#1D9E7588','#BA751788','#88878088','#E24B4A88','#E24B4A88'], borderColor:['#1D9E75','#BA7517','#888780','#E24B4A','#E24B4A'], borderWidth:1, borderRadius:4, yAxisID:'y' },
+      { label:'获粉成本($)', data:[0.069,0.178,0.313,1.317,1.263], type:'line', borderColor:'#378ADD', backgroundColor:'#378ADD44', pointRadius:5, pointHoverRadius:7, yAxisID:'y2', tension:0.3 }
+    ]
+  },
+  options: {
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:true,position:'bottom',labels:{color:textColor,font:{size:10},boxWidth:10,padding:8}} },
+    scales: {
+      x: { ticks:{color:textColor,font:{size:10}}, grid:{color:gridColor} },
+      y: { type:'linear', position:'left', ticks:{color:textColor,font:{size:10}}, grid:{color:gridColor}, title:{display:true,text:'涨粉数',color:textColor,font:{size:10}} },
+      y2: { type:'linear', position:'right', ticks:{color:textColor,font:{size:10},callback:v=>'$'+v.toFixed(2)}, grid:{drawOnChartArea:false}, title:{display:true,text:'$/follower',color:textColor,font:{size:10}} }
+    }
+  }
+});
+
+new Chart(document.getElementById('engChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Reel 1','Post 3','Post 1','Post 2','Reel 2'],
+    datasets: [{ label:'互动率 %', data:[21.84,4.49,1.24,1.25,0.11], backgroundColor:['#378ADD88','#BA751788','#E24B4A88','#E24B4A88','#1D9E7588'], borderColor:['#378ADD','#BA7517','#E24B4A','#E24B4A','#1D9E75'], borderWidth:1, borderRadius:4 }]
+  },
+  options: { ...baseOpts,
+    plugins:{ legend:{display:false}, tooltip:{callbacks:{label:ctx=>ctx.raw.toFixed(2)+'%'}} },
+    scales: {
+      x:{ticks:{color:textColor,font:{size:11}},grid:{color:gridColor}},
+      y:{ticks:{color:textColor,font:{size:11},callback:v=>v+'%'},grid:{color:gridColor}}
+    }
+  }
+});
+
+new Chart(document.getElementById('reelCompChart'), {
+  type: 'bar',
+  data: {
+    labels: ['25%','50%','75%','95%'],
+    datasets: [
+      { label:'Reel 1', data:[783,348,233,182], backgroundColor:'#88878088', borderColor:'#888780', borderWidth:1, borderRadius:2 },
+      { label:'Reel 2', data:[2684,1012,553,380], backgroundColor:'#1D9E7588', borderColor:'#1D9E75', borderWidth:1, borderRadius:2 }
+    ]
+  },
+  options: {
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:true,position:'bottom',labels:{color:textColor,font:{size:10},boxWidth:10,padding:8}} },
+    scales: {
+      x:{ticks:{color:textColor,font:{size:10}},grid:{color:gridColor}},
+      y:{ticks:{color:textColor,font:{size:10}},grid:{color:gridColor},title:{display:true,text:'播放次数',color:textColor,font:{size:10}}}
+    }
+  }
+});
+
+new Chart(document.getElementById('p3r2Chart'), {
+  type: 'bar',
+  data: {
+    labels: ['Impressions','Profile Visits','Follows'],
+    datasets: [
+      { label:'Post 3', data:[425986,9500,337], backgroundColor:'#BA751788', borderColor:'#BA7517', borderWidth:1, borderRadius:2 },
+      { label:'Reel 2', data:[879570,1700,868], backgroundColor:'#1D9E7588', borderColor:'#1D9E75', borderWidth:1, borderRadius:2 }
+    ]
+  },
+  options: {
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:true,position:'bottom',labels:{color:textColor,font:{size:10},boxWidth:10,padding:8}}, tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.raw.toLocaleString()}} },
+    scales: {
+      x:{ticks:{color:textColor,font:{size:9}},grid:{color:gridColor}},
+      y:{ticks:{color:textColor,font:{size:10},callback:v=>v>=1000000?(v/1000000).toFixed(1)+'M':v>=1000?(v/1000).toFixed(0)+'K':v},grid:{color:gridColor}}
+    }
+  }
+});
+</script>
